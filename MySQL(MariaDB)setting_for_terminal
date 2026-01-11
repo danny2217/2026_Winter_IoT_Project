@@ -1,0 +1,12 @@
+-- DB 접속 후 입력
+CREATE DATABASE IF NOT EXISTS iot_db;
+USE iot_db;
+
+DROP TABLE IF EXISTS sensors;
+CREATE TABLE sensors (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    temperature FLOAT,
+    humidity FLOAT,
+    is_motion TINYINT(1),
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
